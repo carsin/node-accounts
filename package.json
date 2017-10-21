@@ -1,0 +1,19 @@
+{
+  "name": "social-network",
+  "version": "1.0.0",
+  "description": "A social network",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carsin/sc.git"
+  },
+  "author": "Carson Freedman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carsin/sc/issues"
+  },
+  "homepage": "https://github.com/carsin/sc#readme"
+}
