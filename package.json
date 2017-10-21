@@ -15,5 +15,18 @@
   "bugs": {
     "url": "https://github.com/carsin/sc/issues"
   },
-  "homepage": "https://github.com/carsin/sc#readme"
+  "homepage": "https://github.com/carsin/sc#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "method-override": "^2.3.10",
+    "mongoose": "^4.12.3",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0"
+  }
 }
