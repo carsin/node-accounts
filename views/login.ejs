@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Signup</title>
+    <title>Log in</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
@@ -26,6 +26,19 @@
             align-items: center;
             justify-content: center;
         }
+
+        .col-md-6 {
+            padding: 15vh 5vh;
+            border: 1px solid #909090;
+            border-radius: 10px;
+            box-shadow: 0px 5px 5px #888888;
+            background-color: #f0f0f0;
+        }
+
+        .col-md-6 button {
+            align-self: center;
+        }
+
     </style>
 </head>
 <body>
@@ -34,9 +47,8 @@
         <div class="row">
             <div class="col-md-6">
 
-                <h1 class="text-center"><span class="fa fa-sign-in"></span> Login</h1>
+                <h1 class="text-center"><span class="fa fa-sign-in"></span> Log in</h1>
 
-                <!-- show any messages that come back with authentication -->
                 <% if (message.length > 0) { %>
                     <div class="alert alert-danger"><%= message %></div>
                 <% } %>
@@ -50,16 +62,11 @@
                         <label class="text-justify col-md-3 control-label" for="password">Password:</label>
                         <input id="password" name="password" placeholder="" class="form-control input-md col-md-9" required="" type="password">
                         <span class="col-md-9 offset-md-3 help-block">Make sure your password is private and unique.</span>
-
                     </div>
-
                     <button type="submit" class="btn btn-primary btn-lg">Login</button>
                 </form>
-
                 <hr>
-
-                <p>Need an account? <a href="/signup">Signup</a></p>
-                <p>Or go <a href="/">home</a>.</p>
+                <p><a href="/signup">Signup</a> if you don't have an account, or you can return <a href="/">home</a>.</p>
             </div>
         </div>
     </div>
