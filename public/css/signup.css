@@ -1,0 +1,37 @@
+#username {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#username-prefix {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.help-block {
+    color: #494949;
+    font-size: 13px;
+    padding-left: 0;
+}
+
+.control-label {
+    padding-left: 0;
+}
+
+.row {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-md-6 {
+    padding: 15vh 5vh;
+    border: 1px solid #909090;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px #888888;
+    background-color: #f0f0f0;
+}
+
+.col-md-6 button {
+    align-self: center;
+}

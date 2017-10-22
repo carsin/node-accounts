@@ -2,10 +2,22 @@
 var express = require("express");
 var mongoose = require("mongoose");
 var passport = require("passport");
+var cookieParser = require("cookie-parser");
+var bodyParser = require("body-parser");
+var expressSession = require("express-session");
+var morgan = require("morgan");
 
 // SETUP
 var app = express();
+app.set("views", __dirname + "/views");
+app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
+app.use(morgan("combined"));
+app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(expressSession({ secret: "express session secret xd", resave: false, saveUninitialized: false }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost/social_network", {
