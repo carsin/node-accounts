@@ -12,9 +12,10 @@ const userSchema = mongoose.Schema({
 // METHODS ======================
 userSchema.methods.generateHash = function(password) {
     bcrypt.genSalt(10, function(err, salt) {
-        // if (err) console.error(err);
+        if (err) console.log(err);
         bcrypt.hash(password, salt, function(err, hash) {
-            // if (err) console.error(err);
+            if (err) console.log(err);
+            console.log("created hash");
             return hash;
         });
     });
