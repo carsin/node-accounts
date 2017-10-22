@@ -21,6 +21,8 @@ const port = process.env.PORT || 8000;
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost/social-network", { keepAlive: true, reconnectTries: Number.MAX_VALUE, useMongoClient: true });
 
+require("./config/passport.js")(passport);
+
 app.use(morgan("dev"));
 app.use(cookieParser());
 app.use(bodyParser.json());

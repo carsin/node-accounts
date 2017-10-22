@@ -3,12 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Log in</title>
+    <title>Sign up</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         html, body {
             height: 100%;
+        }
+
+        #username {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        #username-prefix {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
         }
 
         .help-block {
@@ -53,11 +63,18 @@
                     <div class="alert alert-danger"><%= message %></div>
                 <% } %>
 
-                <form action="/login" method="post">
+                <form action="/signup" method="post">
                     <div class="form-group form-inline">
                         <label class="text-justify col-md-3 control-label" for="email">Email:</label>
                         <input id="email" name="email" placeholder="address@example.com" class="form-control input-md col-md-9" required="" type="text">
                     </div>
+
+                    <div class="form-group form-inline">
+                        <label class="text-justify col-md-3 control-label" for="username">Username:</label>
+                        <span class="input-group-addon col-md-1" id="username-prefix">@</span>
+                        <input id="username" name="username" placeholder="" class="form-control input-md col-md-8" required="" type="text">
+                    </div>
+
                     <div class="form-group form-inline">
                         <label class="text-justify col-md-3 control-label" for="password">Password:</label>
                         <input id="password" name="password" placeholder="" class="form-control input-md col-md-9" required="" type="password">
