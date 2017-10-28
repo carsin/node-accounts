@@ -14,6 +14,10 @@
         <div class="row">
             <div class="col-md-6">
                 <h1 class="text-center"><span class="fa fa-sign-in"></span> Sign up</h1>
+                <!-- show any messages that come back with authentication -->
+                <% if (message.length > 0) { %>
+                    <div class="alert alert-danger"><%= message %></div>
+                <% } %>
                 <form action="/signup" method="post">
                     <div class="form-group form-inline">
                         <label class="text-justify col-md-3 control-label" for="email">Email:</label>
