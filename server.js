@@ -27,7 +27,13 @@ mongoose.connect("mongodb://localhost/social_network", {
 });
 
 // ROUTES
-require("./routes/routes.js")(app, passport);
+app.get("/", (req, res) => {
+    res.render("index.ejs");
+});
+
+app.get("/signup", (req, res) => {
+    res.render("signup.ejs");
+});
 
 // START SERVER
 app.listen(3000, () => {
