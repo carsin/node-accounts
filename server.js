@@ -73,7 +73,7 @@ function(req, email, password, done) {
         User.findOne({"local.email": email}, (err, user) => {
             if (err) return done(err);
             if (user) {
-                return done(null, false, req.flash("signupMessage", "That email is already in use."));
+                return done(null, false, req.flash("signupMessage", "<div class='alert alert-danger'>Email already in use.</div>"));
             } else {
                 var newUser = new User();
 
@@ -83,7 +83,8 @@ function(req, email, password, done) {
                 newUser.save((err) => {
                     if (err) throw err;
 
-                    return done(null, newUser);
+                    return done(null, newUser, req.flash("signupMessage", "<div class='alert alert-success'>Success! Created account successfully. <a href='/login'>Log in</a> here</div>"));
+
                 });
             }
 
@@ -103,7 +104,7 @@ app.get("/signup", (req, res) => {
 });
 
 app.post("/signup", passport.authenticate("local-signup", {
-    successRedirect: "/",
+    successRedirect: "/signup",
     failureRedirect: "/signup",
     failureFlash: true
 }));
