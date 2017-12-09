@@ -73,7 +73,6 @@ function(req, email, password, done) {
 
                 newUser.save((err) => {
                     if (err) throw err;
-
                     return done(null, newUser, req.flash("signupMessage", "<div class='alert alert-success'>Success! Created account successfully. <a href='/login'>Log in</a> here</div>"));
                 });
             }
